@@ -16,10 +16,12 @@ angular.module 'ionic-firechat', ['ionic','firebase']
     templateUrl: 'templates/landing.html'
 
   .state 'inner',
+    controller: 'Navigation'
     url: ''
     templateUrl: 'templates/inner.html'
 
   .state 'inner.public',
+    controller: 'Chat'
     url: '/public'
     templateUrl: 'templates/chat.html'
 

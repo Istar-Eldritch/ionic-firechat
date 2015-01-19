@@ -1,7 +1,17 @@
-<div>
-    <ion-content>
+<ion-view view-title="{{title}}">
+    <ion-content class="has-header has-footer dark-bg">
+        <div class="row" ng-repeat="msg in messages">
+            <div class="col" ng-show="isUser(msg.sender)"></div>
+            <div class="col col-75">
+                <div class="item item-text-wrap">{{msg.content}}</div>
+            </div>
+        </div>
     </ion-content>
-    <div class="bar bar-footer">
-        <button class="button button-clear pull-right">Right</button>
-    </div>
-</div>
+    <ion-footer-bar align-title="left" class="item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-compose placeholder-icon"></i>
+            <input type="search" placeholder="Message" ng-model="message">
+        </label>
+        <button class="button button-icon ion-paper-airplane" ng-click="send(message)"></button>
+    </ion-footer-bar>
+</ion-view>
