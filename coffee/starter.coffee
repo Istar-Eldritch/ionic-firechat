@@ -1,4 +1,4 @@
-angular.module 'starter', ['ionic']
+angular.module 'ionic-firechat', ['ionic','firebase']
 
 .run ($ionicPlatform) ->
   $ionicPlatform.ready ->
@@ -7,5 +7,20 @@ angular.module 'starter', ['ionic']
     if window.StatusBar?
       StatusBar.styleDefault()
 
-.controller 'StatusBarController', ($scope) ->
-  $scope.title = 'BareBones App'
+.config ($stateProvider, $urlRouterProvider) ->
+
+  $stateProvider
+
+  .state 'landing',
+    url: ''
+    templateUrl: 'templates/landing.html'
+
+  .state 'inner',
+    url: ''
+    templateUrl: 'templates/inner.html'
+
+  .state 'inner.public',
+    url: '/public'
+    templateUrl: 'templates/chat.html'
+
+  $urlRouterProvider.otherwise('landing')

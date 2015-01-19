@@ -1,6 +1,7 @@
 {
-  "name": "ionic-coffee",
+  "name": "ionic-firechat",
   "version": "1.0.0",
+  "author": "Ruben Paz",
   "description": "ionic-coffee: An Ionic project",
   "devDependencies": {
     "angular-mocks": "^1.3.9",
