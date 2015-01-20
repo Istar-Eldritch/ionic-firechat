@@ -8,6 +8,7 @@ minifyJS  = require 'gulp-uglify'
 rename    = require 'gulp-rename'
 sh        = require 'shelljs'
 coffee    = require 'gulp-coffee'
+karma     = require('karma').server
 
 paths =
   sass: ['./scss/**/*.scss']
@@ -31,6 +32,12 @@ gulp.task 'coffee', ->
     .pipe minifyJS()
     .pipe rename extname: '.min.js'
     .pipe gulp.dest './www/js/'
+
+gulp.task 'test', (done) ->
+  karma.start
+      configFile: __dirname + '/karma.conf.js'
+      singleRun: true
+    done
 
 gulp.task 'watch', ->
   gulp.watch paths.sass, ['sass']

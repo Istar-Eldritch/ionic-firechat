@@ -28,6 +28,7 @@
     "postinstall": "gulp install",
     "start": "ionic serve --lab",
     "coffee": "gulp coffee",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "test": "gulp test"
   }
 }
