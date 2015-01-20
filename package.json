@@ -25,7 +25,7 @@
     "shelljs": "^0.3.0"
   },
   "scripts": {
-    "postinstall": "gulp install",
+    "postinstall": "gulp install && gulp process",
     "start": "ionic serve --lab",
     "coffee": "gulp coffee",
     "gulp": "gulp",

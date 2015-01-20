@@ -43,9 +43,11 @@ gulp.task 'watch', ->
   gulp.watch paths.sass, ['sass']
   gulp.watch paths.coffee, ['coffee']
 
-gulp.task 'install', ['git-check','sass','coffee'], ->
+gulp.task 'install', ['git-check'], ->
   bower.commands.install().on 'log', (data) ->
     gutil.log('bower', gutil.colors.cyan(data.id), data.message)
+
+gulp.task 'process', ['sass','coffee']
 
 gulp.task 'git-check', (done) ->
   if not sh.which('git')
