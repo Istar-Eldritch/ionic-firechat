@@ -17,7 +17,6 @@ angular.module 'ionic-firechat', ['ionic','firebase']
 
   .state 'inner',
     controller: 'Navigation'
-    url: ''
     templateUrl: 'templates/inner.html'
 
   .state 'inner.public',
@@ -25,4 +24,4 @@ angular.module 'ionic-firechat', ['ionic','firebase']
     url: '/public'
     templateUrl: 'templates/chat.html'
 
-  $urlRouterProvider.otherwise('landing')
+  $urlRouterProvider.otherwise('')

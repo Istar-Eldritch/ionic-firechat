@@ -4,7 +4,7 @@ angular.module 'ionic-firechat'
 
   fireRef.onAuth (data) ->
     if not data?
-      $scope.go 'landing'
+      $state.go 'landing'
 
   $scope.start = ->
     fireRef.authAnonymously (error, data) ->
