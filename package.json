@@ -1,8 +1,8 @@
 {
   "name": "ionic-firechat",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "Ruben Paz",
-  "description": "ionic-coffee: An Ionic project",
+  "description": "ionic-firechat: A Firebase chat made with Ionic Framework",
   "devDependencies": {
     "angular-mocks": "^1.3.9",
     "bower": "^1.3.3",
